@@ -20,26 +20,25 @@
       background: #f9f9f9;
     }
 
-    /* اللون الأساسي الجديد (مستوحى من لون اللوجو الأخضر الفاتح) */
     :root {
       --primary: #7ac8c0;       /* الأخضر الرئيسي */
-      --primary-dark: #5aa8a0;   /* للـ hover */
-      --primary-darker: #3a8880; /* للخلفية الداكنة */
+      --primary-dark: #5aa8a0;   /* hover */
+      --primary-darker: #3a8880; /* للعناوين الداكنة */
       --text-dark: #2a2a2a;
       --gray: #555;
     }
 
-    /* Header / Hero */
+    /* Header / Hero - التعديل الرئيسي هنا */
     header {
-      background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.55)), 
-                  url('https://images.unsplash.com/photo-1588776814546-1fbcdb878b1c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80') center/cover no-repeat;
-      color: white;
+      background: white;
+      color: var(--primary-darker);
       text-align: center;
-      padding: 80px 20px 60px;
+      padding: 70px 20px 50px;
+      border-bottom: 1px solid rgba(122, 200, 192, 0.18);
     }
 
     .logo-container {
-      margin-bottom: 1.5rem;
+      margin-bottom: 1.8rem;
     }
 
     .logo-img {
@@ -49,17 +48,17 @@
 
     header h1 {
       font-size: 2.8rem;
-      margin-bottom: 0.8rem;
-      color: white;
+      margin-bottom: 0.9rem;
+      color: var(--primary-darker);
     }
 
     header p {
       font-size: 1.3rem;
-      margin-bottom: 2rem;
-      max-width: 700px;
+      margin-bottom: 2.2rem;
+      max-width: 720px;
       margin-left: auto;
       margin-right: auto;
-      opacity: 0.95;
+      color: var(--gray);
     }
 
     .btn {
@@ -77,7 +76,7 @@
     .btn:hover {
       background: var(--primary-dark);
       transform: translateY(-3px);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
     }
 
     /* Sections */
@@ -181,7 +180,7 @@
 
     @media (max-width: 768px) {
       header h1 { font-size: 2.1rem; }
-      header { padding: 70px 15px 50px; }
+      header { padding: 60px 15px 40px; }
       section { padding: 60px 15px; }
       h2 { font-size: 2rem; }
       .logo-img { max-width: 180px; }
@@ -194,7 +193,6 @@
 
   <header>
     <div class="logo-container">
-      <!-- استبدل هذا الرابط برابط اللوجو الحقيقي الخاص بك (يفضل PNG شفاف) -->
       <img src="https://raw.githubusercontent.com/sosnowrain/sosnowrain.github.io/main/Logo.png" alt="DR AMR CLINIC" class="logo-img">
     </div>
     <h1>عيادة دكتور عمرو لطب وتجميل الأسنان</h1>
