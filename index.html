@@ -1,16 +1,209 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <title> Dr Amr Clinic </title>
-    <style>
-        body { font-family: Arial; text-align: center; padding: 50px; background: #f0f0f0; }
-        h1 { color: #333; }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>عيادة د. عمرو للأسنان | Dr. Amr Dental Clinic</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Cairo', sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background: #f9f9f9;
+    }
+
+    /* Header / Hero */
+    header {
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1588776814546-1fbcdb878b1c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80') center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 120px 20px 80px;
+    }
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    header p {
+      font-size: 1.3rem;
+      margin-bottom: 2rem;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .btn {
+      display: inline-block;
+      background: #00aaff;
+      color: white;
+      padding: 14px 32px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s;
+    }
+    .btn:hover {
+      background: #0088cc;
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    }
+
+    /* Sections */
+    section {
+      padding: 80px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 3rem;
+      color: #004d80;
+    }
+
+    /* About */
+    #about {
+      background: white;
+    }
+    .about-content {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      align-items: center;
+      justify-content: center;
+    }
+    .about-text {
+      flex: 1;
+      min-width: 300px;
+    }
+    .about-text h3 {
+      color: #00aaff;
+      margin-bottom: 1rem;
+    }
+
+    /* Services */
+    #services .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+    .service-card {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+      transition: transform 0.3s;
+      text-align: center;
+      padding: 30px 20px;
+    }
+    .service-card:hover {
+      transform: translateY(-10px);
+    }
+    .service-card i {
+      font-size: 3.5rem;
+      color: #00aaff;
+      margin-bottom: 1rem;
+    }
+
+    /* Contact */
+    #contact {
+      background: #004d80;
+      color: white;
+      text-align: center;
+    }
+    #contact .info {
+      font-size: 1.2rem;
+      margin: 1.5rem 0;
+    }
+    .contact-details a {
+      color: #00d4ff;
+      text-decoration: none;
+    }
+
+    footer {
+      background: #222;
+      color: #aaa;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 768px) {
+      header h1 { font-size: 2.2rem; }
+      header { padding: 100px 15px 60px; }
+      section { padding: 60px 15px; }
+      h2 { font-size: 2rem; }
+    }
+  </style>
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-    <h1> welcome</h1>
-    <p> Dental Clinic</p>
-    <p>by Dr AMR</p>
+
+  <header>
+    <h1>عيادة دكتور عمرو لطب وتجميل الأسنان</h1>
+    <p>رعاية أسنان احترافية بأحدث التقنيات وبأسعار مناسبة – ابتسامتك تهمنا</p>
+    <a href="#contact" class="btn">احجز موعد الآن</a>
+  </header>
+
+  <section id="about">
+    <h2>من نحن</h2>
+    <div class="about-content">
+      <div class="about-text">
+        <h3> نخبة من أخصائيي طب الأسنان</h3>
+        <p>نقدم خدمات أسنان متكاملة في جو هادئ ومريح، باستخدام أحدث الأجهزة والمواد العالمية.</p>
+        <p>نسعى لتقديم تجربة مريحة ونتائج ممتازة لكل مريض.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <h2>خدماتنا</h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <i class="fas fa-tooth"></i>
+        <h3>تنظيف وتلميع الأسنان</h3>
+        <p>إزالة الجير والتصبغات لابتسامة ناصعة البياض.</p>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-syringe"></i>
+        <h3>حشوات وعلاج العصب</h3>
+        <p>علاجات دقيقة باستخدام تقنيات حديثة بدون ألم.</p>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-smile-beam"></i>
+        <h3>تركيبات وتجميل الأسنان</h3>
+        <p>عدسات أسنان، تيجان زركون، هوليوود سمايل.</p>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-child"></i>
+        <h3>طب أسنان الأطفال</h3>
+        <p>رعاية لطيفة وممتعة لصغار السن.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>تواصل معنا</h2>
+    <p class="info">احجز موعدك الآن أو استفسر عن أي خدمة</p>
+    <div class="info">
+      <p><i class="fas fa-phone"></i> 012 2338 7614</p> 
+      <p><i class="fas fa-Email"></i> info@dramrclinic.online</p>
+      <p><i class="fas fa-map-marker-alt"></i> ٦٤ المحور المركزي مدينة ٦ اكتوبر</p>
+      <p><i class="far fa-clock"></i> يومياً من 2 ظهراً إلى 10 مساءً (ما عدا الجمعة)</p>
+    </div>
+    <a href="tel:01234567890" class="btn" style="background:#fff; color:#004d80;">اتصل الآن</a>
+  </section>
+
+  <footer>
+    <p>© 2026 عيادة دكتور عمرو لطب وتجميل الأسنان – جميع الحقوق محفوظة</p>
+  </footer>
+
 </body>
 </html>
