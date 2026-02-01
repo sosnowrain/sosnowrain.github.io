@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>عيادة دكتور عمرو للأسنان | Dr Amr Dental Clinic</title>
+  <title>عيادة د. عمرو للأسنان | Dr. Amr Dental Clinic</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -28,7 +28,7 @@
       --gray: #555;
     }
 
-    /* Header / Hero - التعديل الرئيسي هنا */
+    /* Header / Hero */
     header {
       background: white;
       color: var(--primary-darker);
@@ -42,8 +42,10 @@
     }
 
     .logo-img {
-      max-width: 220px;
+      max-width: 240px;          /* الحجم المطلوب على الشاشات الكبيرة */
       height: auto;
+      display: block;
+      margin: 0 auto;            /* توسيط اللوجو أفقيًا */
     }
 
     header h1 {
@@ -178,14 +180,19 @@
       font-size: 0.95rem;
     }
 
+    /* حجم أصغر للوجو على الشاشات الصغيرة */
     @media (max-width: 768px) {
       header h1 { font-size: 2.1rem; }
       header { padding: 60px 15px 40px; }
       section { padding: 60px 15px; }
       h2 { font-size: 2rem; }
-      .logo-img { max-width: 180px; }
+      
+      .logo-img {
+        max-width: 170px;        /* حجم اللوجو على الموبايل */
+      }
     }
   </style>
+
   <!-- Font Awesome for icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
