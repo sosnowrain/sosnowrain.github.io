@@ -7,6 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+  
   <style>
     * {
       margin: 0;
@@ -21,9 +22,9 @@
     }
 
     :root {
-      --primary: #7ac8c0;       /* الأخضر الرئيسي */
-      --primary-dark: #5aa8a0;   /* hover */
-      --primary-darker: #3a8880; /* للعناوين الداكنة */
+      --primary: #7ac8c0;
+      --primary-dark: #5aa8a0;
+      --primary-darker: #3a8880;
       --text-dark: #2a2a2a;
       --gray: #555;
     }
@@ -42,10 +43,10 @@
     }
 
     .logo-img {
-      max-width: 240px;          /* الحجم المطلوب على الشاشات الكبيرة */
+      max-width: 240px;
       height: auto;
       display: block;
-      margin: 0 auto;            /* توسيط اللوجو أفقيًا */
+      margin: 0 auto;
     }
 
     header h1 {
@@ -160,9 +161,32 @@
 
     #contact .info {
       font-size: 1.25rem;
-      margin: 1.8rem 0;
+      margin: 1.8rem 0 2.5rem;
     }
-    
+
+    .contact-details {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem 3.5rem;
+      margin: 2rem auto;
+      max-width: 1100px;
+    }
+
+    .contact-details p {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin: 0;
+      font-size: 1.15rem;
+      white-space: nowrap;
+    }
+
+    .contact-details i {
+      font-size: 1.6rem;
+      min-width: 32px;
+      text-align: center;
+    }
 
     .contact-details a {
       color: #e0fffc;
@@ -171,7 +195,9 @@
 
     .contact-details a:hover {
       color: var(--primary);
+      text-decoration: underline;
     }
+
     footer {
       background: #1a1a1a;
       color: #aaa;
@@ -180,7 +206,7 @@
       font-size: 0.95rem;
     }
 
-    /* حجم أصغر للوجو على الشاشات الصغيرة */
+    /* Responsive adjustments */
     @media (max-width: 768px) {
       header h1 { font-size: 2.1rem; }
       header { padding: 60px 15px 40px; }
@@ -188,12 +214,30 @@
       h2 { font-size: 2rem; }
       
       .logo-img {
-        max-width: 120px;        /* حجم اللوجو على الموبايل */
+        max-width: 140px;
+      }
+
+      .contact-details {
+        flex-direction: column;
+        gap: 1.8rem;
+        align-items: center;
+      }
+
+      .contact-details p {
+        font-size: 1.1rem;
+        justify-content: center;
+        white-space: normal;   /* السماح بالانكسار في الموبايل إذا طالت الجملة */
+      }
+    }
+
+    @media (min-width: 769px) and (max-width: 1024px) {
+      .contact-details {
+        gap: 1.8rem 2.5rem;
       }
     }
   </style>
 
-  <!-- Font Awesome for icons -->
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
@@ -247,13 +291,20 @@
   <section id="contact">
     <h2>تواصل معنا</h2>
     <p class="info">احجز موعدك الآن أو استفسر عن أي خدمة</p>
-    <div class="info contact-details">
-      <p><i class="fas fa-phone"></i> 01223387614 </p> 
-      <p><i class="fas fa-map-marker-alt"></i> ٦٤ المحور المركزي – مدينة ٦ أكتوبر </p>
+    
+    <div class="contact-details">
+      <p><i class="fas fa-phone"></i> 01223387614</p>
+      <p><i class="fas fa-map-marker-alt"></i> ٦٤ المحور المركزي – مدينة ٦ أكتوبر</p>
       <p><i class="far fa-clock"></i> يومياً من 2 ظهراً إلى 10 مساءً (ما عدا الجمعة)</p>
-      <p><i class="fas fa-envelope"></i> info@dramrclinic.online </p>
+      <p>
+        <i class="fas fa-envelope"></i> 
+        <a href="mailto:info@dramrclinic.online">info@dramrclinic.online</a>
+      </p>
     </div>
-    <a href="tel:01223387614" class="btn" style="background:white; color:var(--primary-darker);">اتصل الآن</a>
+
+    <a href="tel:01223387614" class="btn" style="background:white; color:var(--primary-darker); margin-top: 2rem;">
+      اتصل الآن
+    </a>
   </section>
 
   <footer>
