@@ -107,6 +107,7 @@
       font-weight: 600;
       font-size: 1.1rem;
       transition: all 0.3s;
+      cursor: pointer;
     }
 
     .btn:hover {
@@ -300,9 +301,13 @@
        data-en="Professional dental care using the latest technologies at reasonable prices – Your Smile Is Our Responsibility">
        رعاية أسنان احترافية بأحدث التقنيات وبأسعار مناسبة – ابتسامتك مسئوليتنا
     </p>
-    <a href="#contact" class="btn" 
+    
+    <!-- زر احجز موعد الآن يفتح التقويم في pop-up -->
+    <button id="open-cal-popup" class="btn" 
        data-ar="احجز موعد الآن"
-       data-en="Book Now">احجز موعد الآن</a>
+       data-en="Book Now">
+       احجز موعد الآن
+    </button>
   </header>
 
   <section id="about">
@@ -437,6 +442,7 @@
     </p>
   </footer>
 
+  <!-- سكريبت اللغة -->
   <script>
     const langToggle = document.getElementById('langToggle');
     let currentLang = localStorage.getItem('lang') || 'ar';
@@ -463,6 +469,32 @@
     langToggle.addEventListener('click', () => {
       const newLang = currentLang === 'ar' ? 'en' : 'ar';
       setLanguage(newLang);
+    });
+  </script>
+
+  <!-- سكريبت pop-up التقويم من Cal.com -->
+  <script type="text/javascript">
+    (function (C, A, L) {
+      let p = function () {try{return new URLSearchParams(window.location.search)}catch(e){return new URLSearchParams()}};
+      let U = "https://app.cal.com";
+      let q = new URL(U + "/embed/embed.js");
+      let r = document.createElement("script");
+      r.setAttribute("src", q.toString());
+      r.onload = function () {
+        window.Cal("ui", {
+          styles: { branding: { brandColor: "#7ac8c0" } },
+          hideEventTypeDetails: false,
+          layout: "month_view"
+        });
+      };
+      document.body.appendChild(r);
+    })(window, document, "script");
+
+    // فتح الـ pop-up عند الضغط على الزر
+    document.getElementById('open-cal-popup').addEventListener('click', function() {
+      window.Cal.ns.embed("popup", {
+        calLink: "dramrclinic/booking"
+      });
     });
   </script>
 
