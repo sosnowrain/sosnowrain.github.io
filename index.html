@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>عيادة د. عمرو للأسنان | Dr. Amr Dental Clinic</title>
+  <title data-ar="عيادة د. عمرو للأسنان | Dr. Amr Dental Clinic"
+         data-en="Dr. Amr Dental Clinic | عيادة د. عمرو للأسنان">عيادة د. عمرو للأسنان | Dr. Amr Dental Clinic</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -29,13 +30,42 @@
       --gray: #555;
     }
 
-    /* Header / Hero */
     header {
       background: white;
       color: var(--primary-darker);
       text-align: center;
       padding: 70px 20px 50px;
       border-bottom: 1px solid rgba(122, 200, 192, 0.18);
+      position: relative;
+    }
+
+    .lang-switcher {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      z-index: 10;
+    }
+
+    .lang-btn {
+      background: var(--primary);
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 30px;
+      cursor: pointer;
+      font-size: 1rem;
+      font-weight: 600;
+      transition: all 0.3s;
+    }
+
+    .lang-btn:hover {
+      background: var(--primary-dark);
+    }
+
+    /* عند التبديل إلى الإنجليزية */
+    html[dir="ltr"] .lang-switcher {
+      left: auto;
+      right: 20px;
     }
 
     .logo-container {
@@ -82,7 +112,6 @@
       box-shadow: 0 10px 25px rgba(0,0,0,0.15);
     }
 
-    /* Sections */
     section {
       padding: 80px 20px;
       max-width: 1200px;
@@ -96,7 +125,6 @@
       color: var(--primary-darker);
     }
 
-    /* About */
     #about {
       background: white;
     }
@@ -119,7 +147,6 @@
       margin-bottom: 1rem;
     }
 
-    /* Services */
     #services .services-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -152,7 +179,6 @@
       margin-bottom: 0.8rem;
     }
 
-    /* Contact */
     #contact {
       background: var(--primary-darker);
       color: white;
@@ -206,7 +232,6 @@
       font-size: 0.95rem;
     }
 
-    /* Responsive adjustments */
     @media (max-width: 768px) {
       header h1 { font-size: 2.1rem; }
       header { padding: 60px 15px 40px; }
@@ -226,7 +251,17 @@
       .contact-details p {
         font-size: 1.1rem;
         justify-content: center;
-        white-space: normal;   /* السماح بالانكسار في الموبايل إذا طالت الجملة */
+        white-space: normal;
+      }
+
+      .lang-switcher {
+        top: 15px;
+        left: 15px;
+      }
+
+      html[dir="ltr"] .lang-switcher {
+        right: 15px;
+        left: auto;
       }
     }
 
@@ -237,79 +272,169 @@
     }
   </style>
 
-  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
+
+  <div class="lang-switcher">
+    <button class="lang-btn" id="langToggle">English</button>
+  </div>
 
   <header>
     <div class="logo-container">
       <img src="https://raw.githubusercontent.com/sosnowrain/sosnowrain.github.io/main/Logo.png" alt="DR AMR CLINIC" class="logo-img">
     </div>
-    <h1>عيادة دكتور عمرو لطب وتجميل الأسنان</h1>
-    <p>رعاية أسنان احترافية بأحدث التقنيات وبأسعار مناسبة – ابتسامتك تهمنا</p>
-    <a href="#contact" class="btn">احجز موعد الآن</a>
+    <h1 data-ar="عيادة دكتور عمرو لطب وتجميل الأسنان"
+       data-en="Dr. Amr Dental & Cosmetic Clinic">عيادة دكتور عمرو لطب وتجميل الأسنان</h1>
+    <p data-ar="رعاية أسنان احترافية بأحدث التقنيات وبأسعار مناسبة – ابتسامتك تهمنا"
+       data-en="Professional dental care using the latest technologies at reasonable prices – Your smile matters to us">
+       رعاية أسنان احترافية بأحدث التقنيات وبأسعار مناسبة – ابتسامتك تهمنا
+    </p>
+    <a href="#contact" class="btn" 
+       data-ar="احجز موعد الآن"
+       data-en="Book Now">احجز موعد الآن</a>
   </header>
 
   <section id="about">
-    <h2>من نحن</h2>
+    <h2 data-ar="من نحن" data-en="About Us">من نحن</h2>
     <div class="about-content">
       <div class="about-text">
-        <h3>نخبة من أطباء الأسنان المتخصصين في مختلف مجالات طب الأسنان</h3>
-        <p>نقدم خدمات أسنان متكاملة في جو هادئ ومريح، باستخدام أحدث الأجهزة والمواد العالمية.</p>
-        <p>نسعى لتقديم تجربة مريحة ونتائج ممتازة لكل مريض.</p>
+        <h3 data-ar="نخبة من أطباء الأسنان المتخصصين في مختلف مجالات طب الأسنان"
+            data-en="A selected group of specialized dentists in various dental fields">
+            نخبة من أطباء الأسنان المتخصصين في مختلف مجالات طب الأسنان
+        </h3>
+        <p data-ar="نقدم خدمات أسنان متكاملة في جو هادئ ومريح، باستخدام أحدث الأجهزة والمواد العالمية."
+           data-en="We provide comprehensive dental services in a calm and comfortable environment, using the latest global equipment and materials.">
+           نقدم خدمات أسنان متكاملة في جو هادئ ومريح، باستخدام أحدث الأجهزة والمواد العالمية.
+        </p>
+        <p data-ar="نسعى لتقديم تجربة مريحة ونتائج ممتازة لكل مريض."
+           data-en="We strive to provide a comfortable experience and excellent results for every patient.">
+           نسعى لتقديم تجربة مريحة ونتائج ممتازة لكل مريض.
+        </p>
       </div>
     </div>
   </section>
 
   <section id="services">
-    <h2>خدماتنا</h2>
+    <h2 data-ar="خدماتنا" data-en="Our Services">خدماتنا</h2>
     <div class="services-grid">
       <div class="service-card">
         <i class="fas fa-tooth"></i>
-        <h3>تنظيف وتلميع الأسنان</h3>
-        <p>إزالة الجير والتصبغات لابتسامة ناصعة البياض.</p>
+        <h3 data-ar="تنظيف وتلميع الأسنان" data-en="Teeth Cleaning & Polishing">تنظيف وتلميع الأسنان</h3>
+        <p data-ar="إزالة الجير والتصبغات لابتسامة ناصعة البياض."
+           data-en="Removal of tartar and stains for a bright white smile.">
+           إزالة الجير والتصبغات لابتسامة ناصعة البياض.
+        </p>
       </div>
       <div class="service-card">
         <i class="fas fa-syringe"></i>
-        <h3>حشوات وعلاج العصب</h3>
-        <p>علاجات دقيقة باستخدام تقنيات حديثة بدون ألم.</p>
+        <h3 data-ar="حشوات وعلاج العصب" data-en="Fillings & Root Canal Treatment">حشوات وعلاج العصب</h3>
+        <p data-ar="علاجات دقيقة باستخدام تقنيات حديثة بدون ألم."
+           data-en="Precise treatments using modern techniques with no pain.">
+           علاجات دقيقة باستخدام تقنيات حديثة بدون ألم.
+        </p>
       </div>
       <div class="service-card">
         <i class="fas fa-smile-beam"></i>
-        <h3>تركيبات وتجميل الأسنان</h3>
-        <p>عدسات أسنان، تيجان زركون، هوليوود سمايل.</p>
+        <h3 data-ar="تركيبات وتجميل الأسنان" data-en="Prosthodontics & Cosmetic Dentistry">تركيبات وتجميل الأسنان</h3>
+        <p data-ar="عدسات أسنان، تيجان زركون، هوليوود سمايل."
+           data-en="Veneers, Zirconia crowns, Hollywood Smile.">
+           عدسات أسنان، تيجان زركون، هوليوود سمايل.
+        </p>
       </div>
       <div class="service-card">
         <i class="fas fa-child"></i>
-        <h3>طب أسنان الأطفال</h3>
-        <p>رعاية لطيفة وممتعة لصغار السن.</p>
+        <h3 data-ar="طب أسنان الأطفال" data-en="Pediatric Dentistry">طب أسنان الأطفال</h3>
+        <p data-ar="رعاية لطيفة وممتعة لصغار السن."
+           data-en="Gentle and enjoyable care for young children.">
+           رعاية لطيفة وممتعة لصغار السن.
+        </p>
       </div>
     </div>
   </section>
 
   <section id="contact">
-    <h2>تواصل معنا</h2>
-    <p class="info">احجز موعدك الآن أو استفسر عن أي خدمة</p>
+    <h2 data-ar="تواصل معنا" data-en="Contact Us">تواصل معنا</h2>
+    <p class="info" 
+       data-ar="احجز موعدك الآن أو استفسر عن أي خدمة"
+       data-en="Book your appointment now or inquire about any service">
+       احجز موعدك الآن أو استفسر عن أي خدمة
+    </p>
     
     <div class="contact-details">
-      <p><i class="fas fa-phone"></i> 01223387614</p>
-      <p><i class="fas fa-map-marker-alt"></i> ٦٤ المحور المركزي – مدينة ٦ أكتوبر</p>
-      <p><i class="far fa-clock"></i> يومياً من 2 ظهراً إلى 10 مساءً (ما عدا الجمعة)</p>
+      <p><i class="fas fa-phone"></i> 
+        <span data-ar="01223387614" data-en="0122 338 7614">01223387614</span>
+      </p>
+      <p><i class="fas fa-map-marker-alt"></i> 
+        <span data-ar="٦٤ المحور المركزي – مدينة ٦ أكتوبر"
+              data-en="64 Central Axis – 6th of October City">
+              ٦٤ المحور المركزي – مدينة ٦ أكتوبر
+        </span>
+      </p>
+      <p><i class="far fa-clock"></i> 
+        <span data-ar="يومياً من 2 ظهراً إلى 10 مساءً (ما عدا الجمعة)"
+              data-en="Daily from 2 PM to 10 PM (except Friday)">
+              يومياً من 2 ظهراً إلى 10 مساءً (ما عدا الجمعة)
+        </span>
+      </p>
       <p>
         <i class="fas fa-envelope"></i> 
-        <a href="mailto:info@dramrclinic.online">info@dramrclinic.online</a>
+        <a href="mailto:info@dramrclinic.online" 
+           data-ar="info@dramrclinic.online"
+           data-en="info@dramrclinic.online">
+           info@dramrclinic.online
+        </a>
       </p>
     </div>
 
-    <a href="tel:01223387614" class="btn" style="background:white; color:var(--primary-darker); margin-top: 2rem;">
-      اتصل الآن
+    <a href="tel:01223387614" class="btn" 
+       style="background:white; color:var(--primary-darker); margin-top: 2rem;"
+       data-ar="اتصل الآن"
+       data-en="Call Now">
+       اتصل الآن
     </a>
   </section>
 
   <footer>
-    <p>© 2026 عيادة دكتور عمرو لطب وتجميل الأسنان – جميع الحقوق محفوظة</p>
+    <p data-ar="© 2026 عيادة دكتور عمرو لطب وتجميل الأسنان – جميع الحقوق محفوظة"
+       data-en="© 2026 Dr. Amr Dental & Cosmetic Clinic – All Rights Reserved">
+       © 2026 عيادة دكتور عمرو لطب وتجميل الأسنان – جميع الحقوق محفوظة
+    </p>
   </footer>
+
+  <script>
+    const langToggle = document.getElementById('langToggle');
+    let currentLang = localStorage.getItem('lang') || 'ar';
+
+    function setLanguage(lang) {
+      currentLang = lang;
+      localStorage.setItem('lang', lang);
+
+      // تغيير لغة واتجاه الصفحة
+      document.documentElement.lang = lang;
+      document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+
+      // تغيير كل النصوص
+      document.querySelectorAll('[data-ar][data-en]').forEach(el => {
+        const key = `data-${lang}`;
+        if (el.hasAttribute(key)) {
+          el.textContent = el.getAttribute(key);
+        }
+      });
+
+      // تغيير نص زر التبديل
+      langToggle.textContent = lang === 'ar' ? 'English' : 'العربية';
+    }
+
+    // تحميل اللغة المحفوظة عند فتح الصفحة
+    setLanguage(currentLang);
+
+    // حدث الضغط على الزر
+    langToggle.addEventListener('click', () => {
+      const newLang = currentLang === 'ar' ? 'en' : 'ar';
+      setLanguage(newLang);
+    });
+  </script>
 
 </body>
 </html>
