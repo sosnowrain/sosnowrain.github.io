@@ -4,7 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title data-ar="عيادة دكتور عمرو لطب وتجميل الأسنان | Dr Amr Dental Clinic"
-         data-en="Dr Amr Dental Clinic | عيادة دكتور عمرو لطب وتجميل الأسنان">عيادة دكتور عمرو لطب وتجميل الأسنان | Dr Amr Dental Clinic</title>
+         data-en="Dr Amr Dental Clinic | عيادة دكتور عمرو لطب وتجميل الأسنان">
+         عيادة دكتور عمرو لطب وتجميل الأسنان | Dr Amr Dental Clinic
+  </title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -28,6 +30,8 @@
       --primary-darker: #3a8880;
       --text-dark: #2a2a2a;
       --gray: #555;
+      --whatsapp: #25D366;
+      --whatsapp-dark: #1da851;
     }
 
     header {
@@ -62,7 +66,6 @@
       background: var(--primary-dark);
     }
 
-    /* عند التبديل إلى الإنجليزية */
     html[dir="ltr"] .lang-switcher {
       left: auto;
       right: 20px;
@@ -112,6 +115,17 @@
       box-shadow: 0 10px 25px rgba(0,0,0,0.15);
     }
 
+    .btn-whatsapp {
+      background: var(--whatsapp);
+      color: white;
+    }
+
+    .btn-whatsapp:hover {
+      background: var(--whatsapp-dark);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+
     section {
       padding: 80px 20px;
       max-width: 1200px;
@@ -125,9 +139,7 @@
       color: var(--primary-darker);
     }
 
-    #about {
-      background: white;
-    }
+    #about { background: white; }
 
     .about-content {
       display: flex;
@@ -238,9 +250,7 @@
       section { padding: 60px 15px; }
       h2 { font-size: 2rem; }
       
-      .logo-img {
-        max-width: 100px;
-      }
+      .logo-img { max-width: 100px; }
 
       .contact-details {
         flex-direction: column;
@@ -288,7 +298,7 @@
        data-en="DR AMR CLINIC">عيادة دكتور عمرو لطب وتجميل الأسنان</h1>
     <p data-ar="رعاية أسنان احترافية بأحدث التقنيات وبأسعار مناسبة – ابتسامتك مسئوليتنا"
        data-en="Professional dental care using the latest technologies at reasonable prices – Your Smile Is Our Responsibility">
-       رعاية أسنان احترافية بأحدث التقنيات وبأسعار مناسبة – ابتسامتك تهمنا
+       رعاية أسنان احترافية بأحدث التقنيات وبأسعار مناسبة – ابتسامتك مسئوليتنا
     </p>
     <a href="#contact" class="btn" 
        data-ar="احجز موعد الآن"
@@ -387,11 +397,14 @@
       </p>
     </div>
 
-    <a href="tel:01223387614" class="btn" 
-       style="background:white; color:var(--primary-darker); margin-top: 2rem;"
-       data-ar="اتصل الآن"
-       data-en="Call Now">
-       اتصل الآن
+    <!-- زر الواتساب المعدل -->
+    <a href="https://wa.me/201223387614?text=مرحبا،%20أود%20حجز%20موعد%20أو%20الاستفسار%20عن%20خدمة%20في%20العيادة" 
+       target="_blank" 
+       class="btn btn-whatsapp" 
+       style="margin-top: 2rem;"
+       data-ar="تواصل عبر واتساب"
+       data-en="Contact via WhatsApp">
+       تواصل عبر واتساب
     </a>
   </section>
 
@@ -410,11 +423,9 @@
       currentLang = lang;
       localStorage.setItem('lang', lang);
 
-      // تغيير لغة واتجاه الصفحة
       document.documentElement.lang = lang;
       document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
 
-      // تغيير كل النصوص
       document.querySelectorAll('[data-ar][data-en]').forEach(el => {
         const key = `data-${lang}`;
         if (el.hasAttribute(key)) {
@@ -422,14 +433,11 @@
         }
       });
 
-      // تغيير نص زر التبديل
       langToggle.textContent = lang === 'ar' ? 'English' : 'العربية';
     }
 
-    // تحميل اللغة المحفوظة عند فتح الصفحة
     setLanguage(currentLang);
 
-    // حدث الضغط على الزر
     langToggle.addEventListener('click', () => {
       const newLang = currentLang === 'ar' ? 'en' : 'ar';
       setLanguage(newLang);
