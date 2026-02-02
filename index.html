@@ -118,7 +118,9 @@
     }
 
     /* إزالة الإطار الأسود/التركيز من الزر */
-    .btn:focus, .btn:active, .btn:focus-visible {
+    .btn:focus,
+    .btn:active,
+    .btn:focus-visible {
       outline: none !important;
       box-shadow: none !important;
       border: none !important;
@@ -320,7 +322,6 @@
     </button>
   </header>
 
-  <!-- باقي الأقسام بدون تغيير -->
   <section id="about">
     <h2 data-ar="من نحن" data-en="About Us">من نحن</h2>
     <div class="about-content">
@@ -344,7 +345,7 @@
   <section id="services">
     <h2 data-ar="خدماتنا" data-en="Our Services">خدماتنا</h2>
     <div class="services-grid">
-      <!-- الخدمات كما هي بدون تغيير -->
+
       <div class="service-card">
         <i class="fas fa-tooth"></i>
         <h3 data-ar="تنظيف وتلميع الأسنان" data-en="Teeth Cleaning & Polishing">تنظيف وتلميع الأسنان</h3>
@@ -353,7 +354,52 @@
            إزالة الجير والتصبغات لابتسامة ناصعة البياض.
         </p>
       </div>
-      <!-- ... باقي الكروت كما هي ... -->
+
+      <div class="service-card">
+        <i class="fas fa-syringe"></i>
+        <h3 data-ar="حشوات وعلاج العصب" data-en="Fillings & Root Canal Treatment">حشوات وعلاج العصب</h3>
+        <p data-ar="علاجات دقيقة باستخدام تقنيات حديثة بدون ألم."
+           data-en="Precise treatments using modern techniques with no pain.">
+           علاجات دقيقة باستخدام تقنيات حديثة بدون ألم.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <i class="fas fa-smile-beam"></i>
+        <h3 data-ar="تركيبات وتجميل الأسنان" data-en="Prosthodontics & Cosmetic Dentistry">تركيبات وتجميل الأسنان</h3>
+        <p data-ar="عدسات أسنان، تيجان زركون، هوليوود سمايل."
+           data-en="Veneers, Zirconia crowns, Hollywood Smile.">
+           عدسات أسنان، تيجان زركون، هوليوود سمايل.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <i class="fas fa-child"></i>
+        <h3 data-ar="طب أسنان الأطفال" data-en="Pediatric Dentistry">طب أسنان الأطفال</h3>
+        <p data-ar="رعاية لطيفة وممتعة لصغار السن."
+           data-en="Gentle and enjoyable care for young children.">
+           رعاية لطيفة وممتعة لصغار السن.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <i class="fas fa-teeth"></i>
+        <h3 data-ar="تقويم الأسنان" data-en="Orthodontics">تقويم الأسنان</h3>
+        <p data-ar="تصحيح اعوجاج الأسنان والفكين بأحدث الأنواع: معدني، شفاف، داخلي، إنفزلاين."
+           data-en="Correction of misaligned teeth and jaws using the latest types: metal, clear, lingual, Invisalign.">
+           تصحيح اعوجاج الأسنان والفكين بأحدث الأنواع: معدني، شفاف، داخلي، إنفزلاين.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <i class="fas fa-screwdriver"></i>
+        <h3 data-ar="زراعة الأسنان" data-en="Dental Implants">زراعة الأسنان</h3>
+        <p data-ar="زراعة أسنان ثابتة عالية الجودة مع تيجان زركون أو إيماكس لنتائج طبيعية تدوم طويلاً."
+           data-en="High-quality fixed dental implants with zirconia or Emax crowns for natural, long-lasting results.">
+           زراعة أسنان ثابتة عالية الجودة مع تيجان زركون أو إيماكس لنتائج طبيعية تدوم طويلاً.
+        </p>
+      </div>
+
     </div>
   </section>
 
@@ -365,8 +411,31 @@
        احجز موعدك الآن أو استفسر عن أي خدمة
     </p>
     
+    <!-- رجعنا بيانات الاتصال كاملة -->
     <div class="contact-details">
-      <!-- بيانات الاتصال كما هي -->
+      <p><i class="fas fa-phone"></i> 
+        <span data-ar="01223387614" data-en="0122 338 7614">01223387614</span>
+      </p>
+      <p><i class="fas fa-map-marker-alt"></i> 
+        <span data-ar="٦٤ المحور المركزي – مدينة ٦ أكتوبر"
+              data-en="64 Central Axis – 6th of October City">
+              ٦٤ المحور المركزي – مدينة ٦ أكتوبر
+        </span>
+      </p>
+      <p><i class="far fa-clock"></i> 
+        <span data-ar="يومياً من 2 ظهراً إلى 10 مساءً (ما عدا الجمعة)"
+              data-en="Daily from 2 PM to 10 PM (except Friday)">
+              يومياً من 2 ظهراً إلى 10 مساءً (ما عدا الجمعة)
+        </span>
+      </p>
+      <p>
+        <i class="fas fa-envelope"></i> 
+        <a href="mailto:info@dramrclinic.online" 
+           data-ar="info@dramrclinic.online"
+           data-en="info@dramrclinic.online">
+           info@dramrclinic.online
+        </a>
+      </p>
     </div>
 
     <a href="https://wa.me/201223387614?text=مرحبا،%20أود%20حجز%20موعد%20أو%20الاستفسار%20عن%20خدمة%20في%20العيادة" 
@@ -386,12 +455,37 @@
     </p>
   </footer>
 
-  <!-- سكريبت اللغة كما هو -->
+  <!-- سكريبت اللغة -->
   <script>
-    // ... كود اللغة بدون تغيير ...
+    const langToggle = document.getElementById('langToggle');
+    let currentLang = localStorage.getItem('lang') || 'ar';
+
+    function setLanguage(lang) {
+      currentLang = lang;
+      localStorage.setItem('lang', lang);
+
+      document.documentElement.lang = lang;
+      document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+
+      document.querySelectorAll('[data-ar][data-en]').forEach(el => {
+        const key = `data-${lang}`;
+        if (el.hasAttribute(key)) {
+          el.textContent = el.getAttribute(key);
+        }
+      });
+
+      langToggle.textContent = lang === 'ar' ? 'English' : 'العربية';
+    }
+
+    setLanguage(currentLang);
+
+    langToggle.addEventListener('click', () => {
+      const newLang = currentLang === 'ar' ? 'en' : 'ar';
+      setLanguage(newLang);
+    });
   </script>
 
-  <!-- سكريبت Cal.com الرسمي لـ pop-up via element click -->
+  <!-- سكريبت Cal.com الرسمي لفتح pop-up عند الضغط على أي عنصر له data-cal-link -->
   <script type="text/javascript">
     (function (C, A, L) {
       let p = function (a, ar) { a.q = a.q || []; a.q.push(ar); };
