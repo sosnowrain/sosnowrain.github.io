@@ -117,7 +117,6 @@
       box-shadow: 0 10px 25px rgba(0,0,0,0.15);
     }
 
-    /* إزالة الإطار الأسود/التركيز من الزر */
     .btn:focus,
     .btn:active,
     .btn:focus-visible {
@@ -312,10 +311,8 @@
        رعاية أسنان احترافية بأحدث التقنيات وبأسعار مناسبة – ابتسامتك مسئوليتنا
     </p>
     
-    <!-- زر احجز موعد الآن مع data attributes لفتح pop-up -->
-    <button class="btn"
-            data-cal-link="dramrclinic/booking"
-            data-cal-config='{"layout":"month_view"}'
+    <!-- زر احجز موعد الآن - سيفتح الرابط حسب اللغة -->
+    <button id="book-appointment-btn" class="btn"
             data-ar="احجز موعد الآن"
             data-en="Book Now">
       احجز موعد الآن
@@ -374,15 +371,6 @@
       </div>
 
       <div class="service-card">
-        <i class="fas fa-child"></i>
-        <h3 data-ar="طب أسنان الأطفال" data-en="Pediatric Dentistry">طب أسنان الأطفال</h3>
-        <p data-ar="رعاية لطيفة وممتعة لصغار السن."
-           data-en="Gentle and enjoyable care for young children.">
-           رعاية لطيفة وممتعة لصغار السن.
-        </p>
-      </div>
-
-      <div class="service-card">
         <i class="fas fa-teeth"></i>
         <h3 data-ar="تقويم الأسنان" data-en="Orthodontics">تقويم الأسنان</h3>
         <p data-ar="تصحيح اعوجاج الأسنان والفكين بأحدث الأنواع: معدني، شفاف، داخلي، إنفزلاين."
@@ -400,6 +388,16 @@
         </p>
       </div>
 
+      <!-- طب أسنان الأطفال أصبح آخر خدمة -->
+      <div class="service-card">
+        <i class="fas fa-child"></i>
+        <h3 data-ar="طب أسنان الأطفال" data-en="Pediatric Dentistry">طب أسنان الأطفال</h3>
+        <p data-ar="رعاية لطيفة وممتعة لصغار السن."
+           data-en="Gentle and enjoyable care for young children.">
+           رعاية لطيفة وممتعة لصغار السن.
+        </p>
+      </div>
+
     </div>
   </section>
 
@@ -411,7 +409,6 @@
        احجز موعدك الآن أو استفسر عن أي خدمة
     </p>
     
-    <!-- رجعنا بيانات الاتصال كاملة -->
     <div class="contact-details">
       <p><i class="fas fa-phone"></i> 
         <span data-ar="01223387614" data-en="0122 338 7614">01223387614</span>
@@ -455,7 +452,7 @@
     </p>
   </footer>
 
-  <!-- سكريبت اللغة -->
+  <!-- سكريبت إدارة اللغة -->
   <script>
     const langToggle = document.getElementById('langToggle');
     let currentLang = localStorage.getItem('lang') || 'ar';
@@ -475,6 +472,12 @@
       });
 
       langToggle.textContent = lang === 'ar' ? 'English' : 'العربية';
+
+      // تحديث نص زر الحجز
+      const bookBtn = document.getElementById('book-appointment-btn');
+      if (bookBtn) {
+        bookBtn.textContent = lang === 'ar' ? 'احجز موعد الآن' : 'Book Now';
+      }
     }
 
     setLanguage(currentLang);
@@ -485,7 +488,7 @@
     });
   </script>
 
-  <!-- سكريبت Cal.com الرسمي لفتح pop-up عند الضغط على أي عنصر له data-cal-link -->
+  <!-- سكريبت Cal.com لفتح pop-up بالرابط المناسب حسب اللغة -->
   <script type="text/javascript">
     (function (C, A, L) {
       let p = function (a, ar) { a.q = a.q || []; a.q.push(ar); };
@@ -503,6 +506,23 @@
       };
       C.Cal('init', '');
     })(window, 'https://app.cal.com/embed/embed.js', 'init');
+
+    // فتح الرابط المناسب حسب اللغة عند الضغط
+    document.getElementById('book-appointment-btn').addEventListener('click', function() {
+      const calLink = currentLang === 'ar' 
+        ? 'dramrclinic/hagz'
+        : 'dramrclinic/booking';
+
+      window.Cal('ui', {
+        styles: { branding: { brandColor: "#7ac8c0" } },
+        hideEventTypeDetails: false,
+        layout: "month_view"
+      });
+
+      window.Cal.ns.embed("popup", {
+        calLink: calLink
+      });
+    });
   </script>
 
 </body>
