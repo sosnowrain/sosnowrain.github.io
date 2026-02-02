@@ -13,12 +13,7 @@
   
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: 'Cairo', sans-serif;
-      line-height: 1.6;
-      color: #333;
-      background: #f9f9f9;
-    }
+    body { font-family: 'Cairo', sans-serif; line-height: 1.6; color: #333; background: #f9f9f9; }
 
     :root {
       --primary: #7ac8c0;
@@ -30,21 +25,9 @@
       --whatsapp-dark: #1da851;
     }
 
-    header {
-      background: white;
-      color: var(--primary-darker);
-      text-align: center;
-      padding: 70px 20px 50px;
-      border-bottom: 1px solid rgba(122, 200, 192, 0.18);
-      position: relative;
-    }
+    header { background: white; color: var(--primary-darker); text-align: center; padding: 70px 20px 50px; border-bottom: 1px solid rgba(122, 200, 192, 0.18); position: relative; }
 
-    .lang-switcher {
-      position: absolute;
-      top: 20px;
-      left: 20px;
-      z-index: 10;
-    }
+    .lang-switcher { position: absolute; top: 20px; left: 20px; z-index: 10; }
 
     .lang-btn {
       background: var(--primary);
@@ -64,27 +47,11 @@
 
     .logo-container { margin-bottom: 1.8rem; }
 
-    .logo-img {
-      max-width: 140px;
-      height: auto;
-      display: block;
-      margin: 0 auto;
-    }
+    .logo-img { max-width: 140px; height: auto; display: block; margin: 0 auto; }
 
-    header h1 {
-      font-size: 2.8rem;
-      margin-bottom: 0.9rem;
-      color: var(--primary-darker);
-    }
+    header h1 { font-size: 2.8rem; margin-bottom: 0.9rem; color: var(--primary-darker); }
 
-    header p {
-      font-size: 1.3rem;
-      margin-bottom: 2.2rem;
-      max-width: 720px;
-      margin-left: auto;
-      margin-right: auto;
-      color: var(--gray);
-    }
+    header p { font-size: 1.3rem; margin-bottom: 2.2rem; max-width: 720px; margin-left: auto; margin-right: auto; color: var(--gray); }
 
     .btn {
       display: inline-block;
@@ -100,54 +67,27 @@
       cursor: pointer;
     }
 
-    .btn:hover {
-      background: var(--primary-dark);
-      transform: translateY(-3px);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-    }
+    .btn:hover { background: var(--primary-dark); transform: translateY(-3px); box-shadow: 0 10px 25px rgba(0,0,0,0.15); }
 
-    .btn:focus, .btn:active, .btn:focus-visible {
-      outline: none !important;
-      box-shadow: none !important;
-      border: none !important;
-    }
+    .btn:focus, .btn:active, .btn:focus-visible { outline: none !important; box-shadow: none !important; border: none !important; }
 
     .btn-whatsapp { background: var(--whatsapp); color: white; }
 
-    .btn-whatsapp:hover {
-      background: var(--whatsapp-dark);
-      transform: translateY(-3px);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-    }
+    .btn-whatsapp:hover { background: var(--whatsapp-dark); transform: translateY(-3px); box-shadow: 0 10px 25px rgba(0,0,0,0.2); }
 
     section { padding: 80px 20px; max-width: 1200px; margin: 0 auto; }
 
-    h2 {
-      text-align: center;
-      font-size: 2.5rem;
-      margin-bottom: 3rem;
-      color: var(--primary-darker);
-    }
+    h2 { text-align: center; font-size: 2.5rem; margin-bottom: 3rem; color: var(--primary-darker); }
 
     #about { background: white; }
 
-    .about-content {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 40px;
-      align-items: center;
-      justify-content: center;
-    }
+    .about-content { display: flex; flex-wrap: wrap; gap: 40px; align-items: center; justify-content: center; }
 
     .about-text { flex: 1; min-width: 300px; }
 
     .about-text h3 { color: var(--primary); margin-bottom: 1rem; }
 
-    #services .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 30px;
-    }
+    #services .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
 
     .service-card {
       background: white;
@@ -159,32 +99,15 @@
       padding: 35px 20px;
     }
 
-    .service-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 15px 35px rgba(122,200,192,0.25);
-    }
+    .service-card:hover { transform: translateY(-10px); box-shadow: 0 15px 35px rgba(122,200,192,0.25); }
 
-    .service-card i {
-      font-size: 3.8rem;
-      color: var(--primary);
-      margin-bottom: 1.2rem;
-    }
+    .service-card i { font-size: 3.8rem; color: var(--primary); margin-bottom: 1.2rem; }
 
-    .service-card h3 {
-      color: var(--primary-darker);
-      margin-bottom: 0.8rem;
-    }
+    .service-card h3 { color: var(--primary-darker); margin-bottom: 0.8rem; }
 
-    #contact {
-      background: var(--primary-darker);
-      color: white;
-      text-align: center;
-    }
+    #contact { background: var(--primary-darker); color: white; text-align: center; }
 
-    #contact .info {
-      font-size: 1.25rem;
-      margin: 1.8rem 0 2.5rem;
-    }
+    #contact .info { font-size: 1.25rem; margin: 1.8rem 0 2.5rem; }
 
     .contact-details {
       display: flex;
@@ -204,29 +127,13 @@
       white-space: nowrap;
     }
 
-    .contact-details i {
-      font-size: 1.6rem;
-      min-width: 32px;
-      text-align: center;
-    }
+    .contact-details i { font-size: 1.6rem; min-width: 32px; text-align: center; }
 
-    .contact-details a {
-      color: #e0fffc;
-      text-decoration: none;
-    }
+    .contact-details a { color: #e0fffc; text-decoration: none; }
 
-    .contact-details a:hover {
-      color: var(--primary);
-      text-decoration: underline;
-    }
+    .contact-details a:hover { color: var(--primary); text-decoration: underline; }
 
-    footer {
-      background: #1a1a1a;
-      color: #aaa;
-      text-align: center;
-      padding: 25px;
-      font-size: 0.95rem;
-    }
+    footer { background: #1a1a1a; color: #aaa; text-align: center; padding: 25px; font-size: 0.95rem; }
 
     @media (max-width: 768px) {
       header h1 { font-size: 2.1rem; }
@@ -234,16 +141,8 @@
       section { padding: 60px 15px; }
       h2 { font-size: 2rem; }
       .logo-img { max-width: 100px; }
-      .contact-details {
-        flex-direction: column;
-        gap: 1.8rem;
-        align-items: center;
-      }
-      .contact-details p {
-        font-size: 1.1rem;
-        justify-content: center;
-        white-space: normal;
-      }
+      .contact-details { flex-direction: column; gap: 1.8rem; align-items: center; }
+      .contact-details p { font-size: 1.1rem; justify-content: center; white-space: normal; }
       .lang-switcher { top: 15px; left: 15px; }
       html[dir="ltr"] .lang-switcher { right: 15px; left: auto; }
     }
@@ -272,16 +171,17 @@
        رعاية أسنان احترافية بأحدث التقنيات وبأسعار مناسبة – ابتسامتك مسئوليتنا
     </p>
     
-    <!-- زر احجز موعد الآن - سيفتح pop-up حسب اللغة -->
-    <button id="book-appointment-btn" class="btn"
+    <!-- زر الحجز اللي هيفتح pop-up -->
+    <button id="book-appointment-btn" class="btn cal-popup-btn"
+            data-cal-link="dramrclinic/hagz"
+            data-cal-config='{"layout":"month_view"}'
             data-ar="احجز موعد الآن"
             data-en="Book Now">
       احجز موعد الآن
     </button>
   </header>
 
-  <!-- باقي الأقسام كما هي (about, services مع طب الأطفال آخر واحد, contact, footer) -->
-
+  <!-- قسم من نحن -->
   <section id="about">
     <h2 data-ar="من نحن" data-en="About Us">من نحن</h2>
     <div class="about-content">
@@ -302,34 +202,31 @@
     </div>
   </section>
 
+  <!-- قسم الخدمات -->
   <section id="services">
     <h2 data-ar="خدماتنا" data-en="Our Services">خدماتنا</h2>
     <div class="services-grid">
-
       <div class="service-card">
         <i class="fas fa-tooth"></i>
         <h3 data-ar="تنظيف وتلميع الأسنان" data-en="Teeth Cleaning & Polishing">تنظيف وتلميع الأسنان</h3>
-        <p data-ar="إزالة الجير والتصبغات لابتسامة ناصعة البياض."
-           data-en="Removal of tartar and stains for a bright white smile.">
-           إزالة الجير والتصبغات لابتسامة ناصعة البياض.
+        <p data-ar="إزالة الجير والتصبغات لابتسامة ناصعة البياض." data-en="Removal of tartar and stains for a bright white smile.">
+          إزالة الجير والتصبغات لابتسامة ناصعة البياض.
         </p>
       </div>
 
       <div class="service-card">
         <i class="fas fa-syringe"></i>
         <h3 data-ar="حشوات وعلاج العصب" data-en="Fillings & Root Canal Treatment">حشوات وعلاج العصب</h3>
-        <p data-ar="علاجات دقيقة باستخدام تقنيات حديثة بدون ألم."
-           data-en="Precise treatments using modern techniques with no pain.">
-           علاجات دقيقة باستخدام تقنيات حديثة بدون ألم.
+        <p data-ar="علاجات دقيقة باستخدام تقنيات حديثة بدون ألم." data-en="Precise treatments using modern techniques with no pain.">
+          علاجات دقيقة باستخدام تقنيات حديثة بدون ألم.
         </p>
       </div>
 
       <div class="service-card">
         <i class="fas fa-smile-beam"></i>
         <h3 data-ar="تركيبات وتجميل الأسنان" data-en="Prosthodontics & Cosmetic Dentistry">تركيبات وتجميل الأسنان</h3>
-        <p data-ar="عدسات أسنان، تيجان زركون، هوليوود سمايل."
-           data-en="Veneers, Zirconia crowns, Hollywood Smile.">
-           عدسات أسنان، تيجان زركون، هوليوود سمايل.
+        <p data-ar="عدسات أسنان، تيجان زركون، هوليوود سمايل." data-en="Veneers, Zirconia crowns, Hollywood Smile.">
+          عدسات أسنان، تيجان زركون، هوليوود سمايل.
         </p>
       </div>
 
@@ -359,7 +256,6 @@
            رعاية لطيفة وممتعة لصغار السن.
         </p>
       </div>
-
     </div>
   </section>
 
@@ -368,41 +264,33 @@
     <p class="info" 
        data-ar="احجز موعدك الآن أو استفسر عن أي خدمة"
        data-en="Book your appointment now or inquire about any service">
-       احجز موعدك الآن أو استفسر عن أي خدمة
+       احجز موعدك الآن أو استفسار عن أي خدمة
     </p>
     
     <div class="contact-details">
-      <p><i class="fas fa-phone"></i> 
-        <span data-ar="01223387614" data-en="0122 338 7614">01223387614</span>
-      </p>
+      <p><i class="fas fa-phone"></i> <span data-ar="01223387614" data-en="0122 338 7614">01223387614</span></p>
       <p><i class="fas fa-map-marker-alt"></i> 
-        <span data-ar="٦٤ المحور المركزي – مدينة ٦ أكتوبر"
-              data-en="64 Central Axis – 6th of October City">
-              ٦٤ المحور المركزي – مدينة ٦ أكتوبر
+        <span data-ar="٦٤ المحور المركزي – مدينة ٦ أكتوبر" data-en="64 Central Axis – 6th of October City">
+          ٦٤ المحور المركزي – مدينة ٦ أكتوبر
         </span>
       </p>
       <p><i class="far fa-clock"></i> 
         <span data-ar="يومياً من 2 ظهراً إلى 10 مساءً (ما عدا الجمعة)"
               data-en="Daily from 2 PM to 10 PM (except Friday)">
-              يومياً من 2 ظهراً إلى 10 مساءً (ما عدا الجمعة)
+          يومياً من 2 ظهراً إلى 10 مساءً (ما عدا الجمعة)
         </span>
       </p>
       <p>
         <i class="fas fa-envelope"></i> 
-        <a href="mailto:info@dramrclinic.online" 
-           data-ar="info@dramrclinic.online"
-           data-en="info@dramrclinic.online">
-           info@dramrclinic.online
+        <a href="mailto:info@dramrclinic.online" data-ar="info@dramrclinic.online" data-en="info@dramrclinic.online">
+          info@dramrclinic.online
         </a>
       </p>
     </div>
 
     <a href="https://wa.me/201223387614?text=مرحبا،%20أود%20حجز%20موعد%20أو%20الاستفسار%20عن%20خدمة%20في%20العيادة" 
-       target="_blank" 
-       class="btn btn-whatsapp" 
-       style="margin-top: 2rem;"
-       data-ar="تواصل عبر واتساب"
-       data-en="Contact via WhatsApp">
+       target="_blank" class="btn btn-whatsapp" style="margin-top: 2rem;"
+       data-ar="تواصل عبر واتساب" data-en="Contact via WhatsApp">
        تواصل عبر واتساب
     </a>
   </section>
@@ -414,7 +302,7 @@
     </p>
   </footer>
 
-  <!-- سكريبت إدارة اللغة -->
+  <!-- سكريبت اللغة -->
   <script>
     const langToggle = document.getElementById('langToggle');
     let currentLang = localStorage.getItem('lang') || 'ar';
@@ -428,16 +316,17 @@
 
       document.querySelectorAll('[data-ar][data-en]').forEach(el => {
         const key = `data-${lang}`;
-        if (el.hasAttribute(key)) {
-          el.textContent = el.getAttribute(key);
-        }
+        if (el.hasAttribute(key)) el.textContent = el.getAttribute(key);
       });
 
       langToggle.textContent = lang === 'ar' ? 'English' : 'العربية';
 
+      // تحديث نص الزر
       const bookBtn = document.getElementById('book-appointment-btn');
       if (bookBtn) {
         bookBtn.textContent = lang === 'ar' ? 'احجز موعد الآن' : 'Book Now';
+        // تحديث data-cal-link حسب اللغة
+        bookBtn.setAttribute('data-cal-link', lang === 'ar' ? 'dramrclinic/hagz' : 'dramrclinic/booking');
       }
     }
 
@@ -449,17 +338,17 @@
     });
   </script>
 
-  <!-- سكريبت Cal.com لفتح pop-up داخلي حسب اللغة -->
+  <!-- سكريبت Cal.com الرسمي للـ pop-up -->
   <script type="text/javascript">
     (function (C, A, L) {
       let p = function (a, ar) { a.q = a.q || []; a.q.push(ar); };
-      let d = C.document; 
+      let d = C.document;
       C.Cal = C.Cal || function () {
-        let cal = C.Cal; 
+        let cal = C.Cal;
         let ar = arguments;
         if (!cal.loaded) {
-          cal.ns = {}; 
-          cal.q = cal.q || []; 
+          cal.ns = {};
+          cal.q = cal.q || [];
           d.head.appendChild(d.createElement('script')).src = A;
           cal.loaded = true;
         }
@@ -467,25 +356,6 @@
       };
       C.Cal('init', '');
     })(window, 'https://app.cal.com/embed/embed.js', 'init');
-
-    // فتح pop-up حسب اللغة عند الضغط
-    document.getElementById('book-appointment-btn').addEventListener('click', function(e) {
-      e.preventDefault(); // منع أي سلوك افتراضي
-
-      const calLink = currentLang === 'ar' 
-        ? 'dramrclinic/hagz'
-        : 'dramrclinic/booking';
-
-      window.Cal('ui', {
-        styles: { branding: { brandColor: "#7ac8c0" } },
-        hideEventTypeDetails: false,
-        layout: "month_view"
-      });
-
-      window.Cal.ns.embed("popup", {
-        calLink: calLink
-      });
-    });
   </script>
 
 </body>
