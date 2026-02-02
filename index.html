@@ -272,13 +272,15 @@
        رعاية أسنان احترافية بأحدث التقنيات وبأسعار مناسبة – ابتسامتك مسئوليتنا
     </p>
     
-    <a id="book-appointment-link" class="btn"
-       target="_blank" rel="noopener noreferrer"
-       data-ar="احجز موعد الآن"
-       data-en="Book Now">
+    <!-- زر احجز موعد الآن - سيفتح pop-up حسب اللغة -->
+    <button id="book-appointment-btn" class="btn"
+            data-ar="احجز موعد الآن"
+            data-en="Book Now">
       احجز موعد الآن
-    </a>
+    </button>
   </header>
+
+  <!-- باقي الأقسام كما هي (about, services مع طب الأطفال آخر واحد, contact, footer) -->
 
   <section id="about">
     <h2 data-ar="من نحن" data-en="About Us">من نحن</h2>
@@ -412,7 +414,7 @@
     </p>
   </footer>
 
-  <!-- سكريبت إدارة اللغة + تحديث رابط الحجز -->
+  <!-- سكريبت إدارة اللغة -->
   <script>
     const langToggle = document.getElementById('langToggle');
     let currentLang = localStorage.getItem('lang') || 'ar';
@@ -433,13 +435,9 @@
 
       langToggle.textContent = lang === 'ar' ? 'English' : 'العربية';
 
-      // تحديث رابط زر الحجز حسب اللغة
-      const bookLink = document.getElementById('book-appointment-link');
-      if (bookLink) {
-        bookLink.href = lang === 'ar' 
-          ? 'https://cal.com/dramrclinic/hagz'
-          : 'https://cal.com/dramrclinic/booking';
-        bookLink.textContent = lang === 'ar' ? 'احجز موعد الآن' : 'Book Now';
+      const bookBtn = document.getElementById('book-appointment-btn');
+      if (bookBtn) {
+        bookBtn.textContent = lang === 'ar' ? 'احجز موعد الآن' : 'Book Now';
       }
     }
 
@@ -449,10 +447,44 @@
       const newLang = currentLang === 'ar' ? 'en' : 'ar';
       setLanguage(newLang);
     });
+  </script>
 
-    // التأكد من تحديث الرابط عند التحميل
-    window.addEventListener('load', () => {
-      setLanguage(currentLang);
+  <!-- سكريبت Cal.com لفتح pop-up داخلي حسب اللغة -->
+  <script type="text/javascript">
+    (function (C, A, L) {
+      let p = function (a, ar) { a.q = a.q || []; a.q.push(ar); };
+      let d = C.document; 
+      C.Cal = C.Cal || function () {
+        let cal = C.Cal; 
+        let ar = arguments;
+        if (!cal.loaded) {
+          cal.ns = {}; 
+          cal.q = cal.q || []; 
+          d.head.appendChild(d.createElement('script')).src = A;
+          cal.loaded = true;
+        }
+        p(cal, ar);
+      };
+      C.Cal('init', '');
+    })(window, 'https://app.cal.com/embed/embed.js', 'init');
+
+    // فتح pop-up حسب اللغة عند الضغط
+    document.getElementById('book-appointment-btn').addEventListener('click', function(e) {
+      e.preventDefault(); // منع أي سلوك افتراضي
+
+      const calLink = currentLang === 'ar' 
+        ? 'dramrclinic/hagz'
+        : 'dramrclinic/booking';
+
+      window.Cal('ui', {
+        styles: { branding: { brandColor: "#7ac8c0" } },
+        hideEventTypeDetails: false,
+        layout: "month_view"
+      });
+
+      window.Cal.ns.embed("popup", {
+        calLink: calLink
+      });
     });
   </script>
 
