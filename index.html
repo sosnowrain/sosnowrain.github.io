@@ -173,7 +173,7 @@
     
     <!-- زر الحجز اللي هيفتح pop-up -->
     <button id="book-appointment-btn" class="btn cal-popup-btn"
-            data-cal-link="dramrclinic/hagz"
+            data-cal-link="dramrclinic/hagz?attendeePhoneNumber=+20"
             data-cal-config='{"layout":"month_view"}'
             data-ar="احجز موعد الآن"
             data-en="Book Now">
@@ -268,7 +268,7 @@
     </p>
     
     <div class="contact-details">
-      <p><i class="fas fa-phone"></i> <span data-ar="01223387614" data-en="0122 338 7614">01223387614</span></p>
+      <p><i class="fas fa-phone"></i> <span data-ar="0122 338 7614" data-en="0122 338 7614">0122 338 7614</span></p>
       <p><i class="fas fa-map-marker-alt"></i> 
         <span data-ar="٦٤ المحور المركزي – مدينة ٦ أكتوبر" data-en="64 Central Axis – 6th of October City">
           ٦٤ المحور المركزي – مدينة ٦ أكتوبر
@@ -326,7 +326,7 @@
       if (bookBtn) {
         bookBtn.textContent = lang === 'ar' ? 'احجز موعد الآن' : 'Book Now';
         // تحديث data-cal-link حسب اللغة
-        bookBtn.setAttribute('data-cal-link', lang === 'ar' ? 'dramrclinic/hagz' : 'dramrclinic/booking');
+        bookBtn.setAttribute('data-cal-link', lang === 'ar' ? 'dramrclinic/hagz?attendeePhoneNumber=+20' : 'dramrclinic/booking?attendeePhoneNumber=+20');
       }
     }
 
