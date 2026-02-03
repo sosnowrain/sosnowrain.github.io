@@ -11,9 +11,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
   
-  <!-- مكتبة intl-tel-input للتحكم في حقل الهاتف -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"/>
-  
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { font-family: 'Cairo', sans-serif; line-height: 1.6; color: #333; background: #f9f9f9; }
@@ -156,8 +153,6 @@
   </style>
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <!-- مكتبة intl-tel-input للتحكم في حقل الهاتف -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"/>
 </head>
 <body>
 
@@ -176,7 +171,8 @@
        رعاية أسنان احترافية بأحدث التقنيات وبأسعار مناسبة – ابتسامتك مسئوليتنا
     </p>
     
-    <button id="book-appointment-btn" class="btn"
+    <!-- زر الحجز اللي هيفتح pop-up -->
+    <button id="book-appointment-btn" class="btn cal-popup-btn"
             data-cal-link="dramrclinic/hagz"
             data-cal-config='{"layout":"month_view"}'
             data-ar="احجز موعد الآن"
@@ -185,7 +181,7 @@
     </button>
   </header>
 
-  <!-- باقي الأقسام (about - services - contact - footer) بدون أي تغيير -->
+  <!-- قسم من نحن -->
   <section id="about">
     <h2 data-ar="من نحن" data-en="About Us">من نحن</h2>
     <div class="about-content">
@@ -206,20 +202,52 @@
     </div>
   </section>
 
+  <!-- قسم الخدمات -->
   <section id="services">
     <h2 data-ar="خدماتنا" data-en="Our Services">خدماتنا</h2>
     <div class="services-grid">
-      <!-- تنظيف وتلميع -->
-      <div class="service-card">...</div>
-      <!-- حشوات وعصب -->
-      <div class="service-card">...</div>
-      <!-- تركيبات وتجميل -->
-      <div class="service-card">...</div>
-      <!-- تقويم الأسنان -->
-      <div class="service-card">...</div>
-      <!-- زراعة الأسنان -->
-      <div class="service-card">...</div>
-      <!-- طب أسنان الأطفال (آخر واحد) -->
+      <div class="service-card">
+        <i class="fas fa-tooth"></i>
+        <h3 data-ar="تنظيف وتلميع الأسنان" data-en="Teeth Cleaning & Polishing">تنظيف وتلميع الأسنان</h3>
+        <p data-ar="إزالة الجير والتصبغات لابتسامة ناصعة البياض." data-en="Removal of tartar and stains for a bright white smile.">
+          إزالة الجير والتصبغات لابتسامة ناصعة البياض.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <i class="fas fa-syringe"></i>
+        <h3 data-ar="حشوات وعلاج العصب" data-en="Fillings & Root Canal Treatment">حشوات وعلاج العصب</h3>
+        <p data-ar="علاجات دقيقة باستخدام تقنيات حديثة بدون ألم." data-en="Precise treatments using modern techniques with no pain.">
+          علاجات دقيقة باستخدام تقنيات حديثة بدون ألم.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <i class="fas fa-smile-beam"></i>
+        <h3 data-ar="تركيبات وتجميل الأسنان" data-en="Prosthodontics & Cosmetic Dentistry">تركيبات وتجميل الأسنان</h3>
+        <p data-ar="عدسات أسنان، تيجان زركون، هوليوود سمايل." data-en="Veneers, Zirconia crowns, Hollywood Smile.">
+          عدسات أسنان، تيجان زركون، هوليوود سمايل.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <i class="fas fa-teeth"></i>
+        <h3 data-ar="تقويم الأسنان" data-en="Orthodontics">تقويم الأسنان</h3>
+        <p data-ar="تصحيح اعوجاج الأسنان والفكين بأحدث الأنواع: معدني، شفاف، داخلي، إنفزلاين."
+           data-en="Correction of misaligned teeth and jaws using the latest types: metal, clear, lingual, Invisalign.">
+           تصحيح اعوجاج الأسنان والفكين بأحدث الأنواع: معدني، شفاف، داخلي، إنفزلاين.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <i class="fas fa-screwdriver"></i>
+        <h3 data-ar="زراعة الأسنان" data-en="Dental Implants">زراعة الأسنان</h3>
+        <p data-ar="زراعة أسنان ثابتة عالية الجودة مع تيجان زركون أو إيماكس لنتائج طبيعية تدوم طويلاً."
+           data-en="High-quality fixed dental implants with zirconia or Emax crowns for natural, long-lasting results.">
+           زراعة أسنان ثابتة عالية الجودة مع تيجان زركون أو إيماكس لنتائج طبيعية تدوم طويلاً.
+        </p>
+      </div>
+
       <div class="service-card">
         <i class="fas fa-child"></i>
         <h3 data-ar="طب أسنان الأطفال" data-en="Pediatric Dentistry">طب أسنان الأطفال</h3>
@@ -233,8 +261,10 @@
 
   <section id="contact">
     <h2 data-ar="تواصل معنا" data-en="Contact Us">تواصل معنا</h2>
-    <p class="info" data-ar="احجز موعدك الآن أو استفسر عن أي خدمة" data-en="Book your appointment now or inquire about any service">
-      احجز موعدك الآن أو استفسر عن أي خدمة
+    <p class="info" 
+       data-ar="احجز موعدك الآن أو استفسر عن أي خدمة"
+       data-en="Book your appointment now or inquire about any service">
+       احجز موعدك الآن أو استفسار عن أي خدمة
     </p>
     
     <div class="contact-details">
@@ -267,7 +297,7 @@
 
   <footer>
     <p data-ar="© 2026 عيادة دكتور عمرو لطب وتجميل الأسنان – جميع الحقوق محفوظة"
-       data-en="© 2026 Dr. Amr Dental & Cosmetic Clinic – All Rights Reserved">
+       data-en="© 2026 Dr Amr Dental Clinic – All Rights Reserved">
        © 2026 عيادة دكتور عمرو لطب وتجميل الأسنان – جميع الحقوق محفوظة
     </p>
   </footer>
@@ -291,9 +321,11 @@
 
       langToggle.textContent = lang === 'ar' ? 'English' : 'العربية';
 
+      // تحديث نص الزر
       const bookBtn = document.getElementById('book-appointment-btn');
       if (bookBtn) {
         bookBtn.textContent = lang === 'ar' ? 'احجز موعد الآن' : 'Book Now';
+        // تحديث data-cal-link حسب اللغة
         bookBtn.setAttribute('data-cal-link', lang === 'ar' ? 'dramrclinic/hagz' : 'dramrclinic/booking');
       }
     }
@@ -306,10 +338,7 @@
     });
   </script>
 
-  <!-- مكتبة intl-tel-input لتثبيت +20 مصر افتراضيًا -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
-
-  <!-- سكريبت Cal.com + تثبيت +20 مصر -->
+  <!-- سكريبت Cal.com الرسمي للـ pop-up -->
   <script type="text/javascript">
     (function (C, A, L) {
       let p = function (a, ar) { a.q = a.q || []; a.q.push(ar); };
@@ -327,38 +356,6 @@
       };
       C.Cal('init', '');
     })(window, 'https://app.cal.com/embed/embed.js', 'init');
-
-    // فتح pop-up + تثبيت كود مصر +20 افتراضيًا
-    document.getElementById('book-appointment-btn').addEventListener('click', function(e) {
-      e.preventDefault();
-
-      const calLink = currentLang === 'ar' ? 'dramrclinic/hagz' : 'dramrclinic/booking';
-
-      window.Cal('ui', {
-        styles: { branding: { brandColor: "#7ac8c0" } },
-        hideEventTypeDetails: false,
-        layout: "month_view"
-      });
-
-      window.Cal.ns.embed("popup", {
-        calLink: calLink
-      });
-
-      // انتظر لحد ما يتحمل الـ popup وحقل الهاتف
-      const checkPhoneInput = setInterval(() => {
-        const phoneInput = document.querySelector('input[type="tel"]');
-        if (phoneInput && window.intlTelInput) {
-          const iti = window.intlTelInput(phoneInput, {
-            initialCountry: "eg",          // كود مصر
-            preferredCountries: ["eg"],    // يحط مصر في الأولوية
-            autoPlaceholder: "aggressive", // يظهر placeholder تلقائي
-            utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"
-          });
-          iti.setCountry("eg"); // يثبت +20 مصر
-          clearInterval(checkPhoneInput);
-        }
-      }, 300); // يتحقق كل 300 مللي ثانية لحد ما يلاقي الحقل
-    });
   </script>
 
 </body>
