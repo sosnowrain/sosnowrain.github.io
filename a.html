@@ -10,29 +10,30 @@
   <style>
     body { font-family: 'Tajawal', system-ui, sans-serif; }
     :root {
-      --primary: #ad8651;
-      --primary-dark: #8f6e42;
-      --primary-light: #c4a878;
+      --primary: #b59567;
+      --primary-dark: #9a7d55;
+      --primary-darker: #80653f;
+      --primary-light: #d0b89a;
     }
   </style>
   <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 <body class="bg-gray-50 text-gray-800">
 
-  <!-- Navbar ثابت -->
-  <nav class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
+  <!-- Navbar ثابت - خلفية باللون الرئيسي -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-[var(--primary)] shadow-lg">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center h-20">
-        <div class="text-3xl font-bold text-[var(--primary)]">Crown Clinic</div>
-        <div class="hidden md:flex space-x-10 space-x-reverse font-medium">
-          <a href="#home" class="hover:text-[var(--primary)] transition">الرئيسية</a>
-          <a href="#about" class="hover:text-[var(--primary)] transition">من نحن</a>
-          <a href="#services" class="hover:text-[var(--primary)] transition">الخدمات</a>
-          <a href="#testimonials" class="hover:text-[var(--primary)] transition">آراء العملاء</a>
-          <a href="#contact" class="hover:text-[var(--primary)] transition">تواصل معنا</a>
+        <div class="text-3xl font-bold text-white">Crown Clinic</div>
+        <div class="hidden md:flex space-x-10 space-x-reverse font-medium text-white">
+          <a href="#home" class="hover:text-gray-200 transition">الرئيسية</a>
+          <a href="#about" class="hover:text-gray-200 transition">من نحن</a>
+          <a href="#services" class="hover:text-gray-200 transition">الخدمات</a>
+          <a href="#testimonials" class="hover:text-gray-200 transition">آراء العملاء</a>
+          <a href="#contact" class="hover:text-gray-200 transition">تواصل معنا</a>
         </div>
         <a href="https://wa.me/201223387614?text=مرحبا،%20أود%20حجز%20موعد%20في%20Crown%20Clinic" 
-           class="bg-[var(--primary)] text-white px-6 py-3 rounded-full font-medium hover:bg-[var(--primary-dark)] transition flex items-center gap-2 shadow-sm">
+           class="bg-[var(--primary-dark)] text-white px-6 py-3 rounded-full font-medium hover:bg-[var(--primary-darker)] transition flex items-center gap-2 shadow-md">
           <i class="fab fa-whatsapp"></i> احجز الآن
         </a>
       </div>
@@ -40,7 +41,7 @@
   </nav>
 
   <!-- Hero -->
-  <section id="home" class="pt-32 pb-24 bg-gradient-to-br from-[var(--primary-light)]/30 via-white to-white">
+  <section id="home" class="pt-32 pb-24 bg-gradient-to-br from-[var(--primary-light)]/40 via-white to-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
       <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-6 text-gray-800">
         ابتسامتك الملكية تبدأ من هنا
@@ -75,8 +76,7 @@
         </ul>
       </div>
       <div class="relative">
-        <!-- استبدل بالصورة الحقيقية -->
-        <img src="https://via.placeholder.com/600x700/AD8651/ffffff?text=Crown+Clinic" alt="Crown Clinic" class="rounded-2xl shadow-2xl object-cover">
+        <img src="https://via.placeholder.com/600x700/b59567/ffffff?text=Crown+Clinic" alt="Crown Clinic" class="rounded-2xl shadow-2xl object-cover">
       </div>
     </div>
   </section>
