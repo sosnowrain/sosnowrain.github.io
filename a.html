@@ -3,12 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>عيادة د. عمرو لطب وتجميل الأسنان | ابتسامتك مسئوليتنا</title>
-  <meta name="description" content="رعاية أسنان احترافية بأحدث التقنيات في 6 أكتوبر – تنظيف، زراعة، تقويم، هوليوود سمايل وأكثر. احجز الآن!"/>
+  <title>Crown Clinic | عيادة كراون لطب وتجميل الأسنان</title>
+  <meta name="description" content="رعاية أسنان احترافية وتجميل ابتسامة فاخرة في 6 أكتوبر – زراعة، هوليوود سمايل، تقويم شفاف وأكثر. احجز الآن!"/>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
   <style>
     body { font-family: 'Tajawal', system-ui, sans-serif; }
+    :root {
+      --primary: #ad8651;
+      --primary-dark: #8f6e42;
+      --primary-light: #c4a878;
+    }
   </style>
   <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
@@ -18,16 +23,16 @@
   <nav class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center h-20">
-        <div class="text-2xl font-bold text-teal-600">د. عمرو</div>
-        <div class="hidden md:flex space-x-10 space-x-reverse">
-          <a href="#home" class="hover:text-teal-600 transition">الرئيسية</a>
-          <a href="#about" class="hover:text-teal-600 transition">من نحن</a>
-          <a href="#services" class="hover:text-teal-600 transition">الخدمات</a>
-          <a href="#testimonials" class="hover:text-teal-600 transition">آراء المرضى</a>
-          <a href="#contact" class="hover:text-teal-600 transition">تواصل معنا</a>
+        <div class="text-3xl font-bold text-[var(--primary)]">Crown Clinic</div>
+        <div class="hidden md:flex space-x-10 space-x-reverse font-medium">
+          <a href="#home" class="hover:text-[var(--primary)] transition">الرئيسية</a>
+          <a href="#about" class="hover:text-[var(--primary)] transition">من نحن</a>
+          <a href="#services" class="hover:text-[var(--primary)] transition">الخدمات</a>
+          <a href="#testimonials" class="hover:text-[var(--primary)] transition">آراء العملاء</a>
+          <a href="#contact" class="hover:text-[var(--primary)] transition">تواصل معنا</a>
         </div>
-        <a href="https://wa.me/201223387614?text=مرحبا،%20أود%20حجز%20موعد" 
-           class="bg-teal-600 text-white px-6 py-3 rounded-full font-medium hover:bg-teal-700 transition flex items-center gap-2">
+        <a href="https://wa.me/201223387614?text=مرحبا،%20أود%20حجز%20موعد%20في%20Crown%20Clinic" 
+           class="bg-[var(--primary)] text-white px-6 py-3 rounded-full font-medium hover:bg-[var(--primary-dark)] transition flex items-center gap-2 shadow-sm">
           <i class="fab fa-whatsapp"></i> احجز الآن
         </a>
       </div>
@@ -35,21 +40,21 @@
   </nav>
 
   <!-- Hero -->
-  <section id="home" class="pt-32 pb-20 bg-gradient-to-br from-teal-50 to-white">
+  <section id="home" class="pt-32 pb-24 bg-gradient-to-br from-[var(--primary-light)]/30 via-white to-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-6">
-        ابتسامتك المثالية تبدأ من هنا
+      <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-6 text-gray-800">
+        ابتسامتك الملكية تبدأ من هنا
       </h1>
-      <p class="text-xl md:text-2xl text-gray-600 mb-10 max-w-3xl mx-auto">
-        رعاية أسنان احترافية بأحدث التقنيات وبأسعار مناسبة في 6 أكتوبر
+      <p class="text-xl md:text-2xl text-gray-700 mb-10 max-w-3xl mx-auto">
+        تجربة أسنان فاخرة بأحدث التقنيات في قلب 6 أكتوبر – Crown Clinic
       </p>
       <div class="flex flex-col sm:flex-row justify-center gap-6">
-        <a href="https://wa.me/201223387614?text=مرحبا،%20أود%20حجز%20موعد" 
-           class="bg-teal-600 text-white px-10 py-5 rounded-full text-lg font-medium hover:bg-teal-700 transition shadow-lg">
+        <a href="https://wa.me/201223387614?text=مرحبا،%20أود%20حجز%20موعد%20في%20Crown%20Clinic" 
+           class="bg-[var(--primary)] text-white px-10 py-5 rounded-full text-lg font-medium hover:bg-[var(--primary-dark)] transition shadow-lg">
           احجز موعد الآن
         </a>
-        <a href="#services" class="border-2 border-teal-600 text-teal-600 px-10 py-5 rounded-full text-lg font-medium hover:bg-teal-50 transition">
-          تعرف على خدماتنا
+        <a href="#services" class="border-2 border-[var(--primary)] text-[var(--primary)] px-10 py-5 rounded-full text-lg font-medium hover:bg-[var(--primary)] hover:text-white transition">
+          اكتشف خدماتنا
         </a>
       </div>
     </div>
@@ -59,19 +64,19 @@
   <section id="about" class="py-20 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-12 items-center">
       <div>
-        <h2 class="text-4xl font-bold mb-6">د. عمرو – خبرة في طب وتجميل الأسنان</h2>
-        <p class="text-lg text-gray-600 mb-6">
-          أكثر من [X] سنوات خبرة في تقديم حلول أسنان متقدمة مع التركيز على راحة المريض والنتائج الطبيعية. نستخدم أحدث الأجهزة والمواد (مثل Invisalign، Zircon، Emax).
+        <h2 class="text-4xl font-bold mb-6 text-gray-800">مرحباً بك في Crown Clinic</h2>
+        <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+          فريق متخصص في طب الأسنان وتجميل الابتسامة، نهتم بتقديم نتائج طبيعية ومريحة باستخدام أفضل المواد العالمية (Zircon، Emax، Invisalign).
         </p>
         <ul class="space-y-4 text-lg">
-          <li class="flex items-center gap-3"><i class="fas fa-check-circle text-teal-600"></i> معاملة شخصية مريحة</li>
-          <li class="flex items-center gap-3"><i class="fas fa-check-circle text-teal-600"></i> ضمان جودة عالية</li>
-          <li class="flex items-center gap-3"><i class="fas fa-check-circle text-teal-600"></i> أسعار شفافة</li>
+          <li class="flex items-center gap-3"><i class="fas fa-check-circle text-[var(--primary)]"></i> راحة المريض أولوية</li>
+          <li class="flex items-center gap-3"><i class="fas fa-check-circle text-[var(--primary)]"></i> تقنيات حديثة ومعقمة</li>
+          <li class="flex items-center gap-3"><i class="fas fa-check-circle text-[var(--primary)]"></i> أسعار تنافسية وشفافة</li>
         </ul>
       </div>
       <div class="relative">
-        <!-- ضع صورة الدكتور هنا -->
-        <img src="https://via.placeholder.com/600x700?text=صورة+الدكتور+عمرو" alt="د. عمرو" class="rounded-2xl shadow-2xl object-cover">
+        <!-- استبدل بالصورة الحقيقية -->
+        <img src="https://via.placeholder.com/600x700/AD8651/ffffff?text=Crown+Clinic" alt="Crown Clinic" class="rounded-2xl shadow-2xl object-cover">
       </div>
     </div>
   </section>
@@ -79,61 +84,46 @@
   <!-- Services -->
   <section id="services" class="py-20 bg-gray-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-4xl font-bold text-center mb-16">خدماتنا المتخصصة</h2>
+      <h2 class="text-4xl font-bold text-center mb-16 text-gray-800">خدماتنا المميزة</h2>
       <div class="grid md:grid-cols-3 gap-8">
-        <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition">
-          <div class="text-teal-600 text-5xl mb-6"><i class="fas fa-tooth"></i></div>
-          <h3 class="text-2xl font-bold mb-4">تنظيف وتبييض</h3>
-          <p>تنظيف عميق + تلميع + تبييض آمن بتقنيات حديثة.</p>
+        <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition border-t-4 border-[var(--primary)]">
+          <div class="text-[var(--primary)] text-5xl mb-6"><i class="fas fa-tooth"></i></div>
+          <h3 class="text-2xl font-bold mb-4">تبييض وتنظيف متقدم</h3>
+          <p class="text-gray-600">نتائج فورية آمنة مع تقنيات الليزر والتبييض المنزلي.</p>
         </div>
-        <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition">
-          <div class="text-teal-600 text-5xl mb-6"><i class="fas fa-tools"></i></div>
-          <h3 class="text-2xl font-bold mb-4">زراعة وتركيبات</h3>
-          <p>زراعة أسنان + تيجان Zircon و Emax + هوليوود سمايل.</p>
+        <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition border-t-4 border-[var(--primary)]">
+          <div class="text-[var(--primary)] text-5xl mb-6"><i class="fas fa-tools"></i></div>
+          <h3 class="text-2xl font-bold mb-4">زراعة وتركيبات فاخرة</h3>
+          <p class="text-gray-600">زراعة أسنان + تيجان Zircon و Emax + هوليوود سمايل.</p>
         </div>
-        <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition">
-          <div class="text-teal-600 text-5xl mb-6"><i class="fas fa-child"></i></div>
-          <h3 class="text-2xl font-bold mb-4">تقويم وأسنان أطفال</h3>
-          <p>Invisalign، تقويم شفاف + علاج أطفال بلطف.</p>
+        <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition border-t-4 border-[var(--primary)]">
+          <div class="text-[var(--primary)] text-5xl mb-6"><i class="fas fa-child"></i></div>
+          <h3 class="text-2xl font-bold mb-4">تقويم شفاف وأطفال</h3>
+          <p class="text-gray-600">Invisalign وتقويم الأطفال بلطف ودقة عالية.</p>
         </div>
-        <!-- أضف باقي الخدمات بنفس الطريقة -->
-      </div>
-    </div>
-  </section>
-
-  <!-- Testimonials (placeholder) -->
-  <section id="testimonials" class="py-20 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="text-4xl font-bold mb-16">ماذا يقول مرضانا؟</h2>
-      <div class="grid md:grid-cols-3 gap-8">
-        <div class="bg-gray-50 p-8 rounded-2xl">
-          <p class="italic mb-6">"تجربة رائعة، النتيجة فاقت التوقعات!"</p>
-          <p class="font-bold">– أحمد م.</p>
-        </div>
-        <!-- كرر لـ 2–3 آراء -->
       </div>
     </div>
   </section>
 
   <!-- Contact & Footer -->
-  <section id="contact" class="py-20 bg-teal-600 text-white">
+  <section id="contact" class="py-20 bg-[var(--primary)] text-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="text-4xl font-bold mb-8">جاهزين نبدأ رحلة ابتسامتك؟</h2>
-      <p class="text-xl mb-10">اتصل بنا أو راسلنا على واتساب الآن</p>
+      <h2 class="text-4xl font-bold mb-8">جاهزين لابتسامتك الجديدة؟</h2>
+      <p class="text-xl mb-10">تواصل مع Crown Clinic الآن – فريقك الموثوق</p>
       <div class="flex flex-col md:flex-row justify-center gap-8 text-lg">
         <div><i class="fas fa-phone mr-3"></i> 0122 338 7614</div>
-        <div><i class="fas fa-map-marker-alt mr-3"></i> ٦٤ المحور المركزي – 6 أكتوبر</div>
-        <div><i class="far fa-clock mr-3"></i> يوميًا 2 م – 10 م (عدا الجمعة)</div>
+        <div><i class="fas fa-map-marker-alt mr-3"></i> 6 أكتوبر – المحور المركزي</div>
+        <div><i class="far fa-clock mr-3"></i> يومياً 2 م – 10 م</div>
       </div>
-      <a href="https://wa.me/201223387614?text=مرحبا،%20أود%20حجز%20موعد" 
-         class="mt-10 inline-block bg-white text-teal-600 px-12 py-6 rounded-full text-xl font-bold hover:bg-gray-100 transition">
+      <a href="https://wa.me/201223387614?text=مرحبا،%20أود%20حجز%20موعد%20في%20Crown%20Clinic" 
+         class="mt-10 inline-block bg-white text-[var(--primary)] px-12 py-6 rounded-full text-xl font-bold hover:bg-gray-100 transition shadow-lg">
          تواصل عبر واتساب الآن
       </a>
     </div>
   </section>
 
   <footer class="bg-gray-900 text-gray-400 py-8 text-center">
-    <p>© 2026 عيادة د. عمرو لطب وتجميل الأسنان – جميع الحقوق محفوظة</p>
+    <p>© 2026 Crown Clinic – جميع الحقوق محفوظة</p>
   </footer>
 
 </body>
