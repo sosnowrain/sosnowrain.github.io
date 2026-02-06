@@ -171,7 +171,7 @@
        رعاية أسنان احترافية بأحدث التقنيات وبأسعار مناسبة – ابتسامتك مسئوليتنا
     </p>
     
-    <!-- زر الحجز اللي هيفتح pop-up -->
+    <!-- زر الحجز – اللينك ثابت الآن -->
     <button id="book-appointment-btn" class="btn cal-popup-btn"
             data-cal-link="dramrclinic/hagz?attendeePhoneNumber=+20"
             data-cal-config='{"layout":"month_view"}'
@@ -181,7 +181,7 @@
     </button>
   </header>
 
-  <!-- قسم من نحن -->
+  <!-- باقي الأقسام بدون تغيير -->
   <section id="about">
     <h2 data-ar="من نحن" data-en="About Us">من نحن</h2>
     <div class="about-content">
@@ -202,7 +202,6 @@
     </div>
   </section>
 
-  <!-- قسم الخدمات -->
   <section id="services">
     <h2 data-ar="خدماتنا" data-en="Our Services">خدماتنا</h2>
     <div class="services-grid">
@@ -302,7 +301,7 @@
     </p>
   </footer>
 
-  <!-- سكريبت اللغة -->
+  <!-- سكريبت اللغة (تم تعديله) -->
   <script>
     const langToggle = document.getElementById('langToggle');
     let currentLang = localStorage.getItem('lang') || 'ar';
@@ -321,12 +320,11 @@
 
       langToggle.textContent = lang === 'ar' ? 'English' : 'العربية';
 
-      // تحديث نص الزر
+      // تحديث نص الزر فقط – بدون تغيير اللينك
       const bookBtn = document.getElementById('book-appointment-btn');
       if (bookBtn) {
         bookBtn.textContent = lang === 'ar' ? 'احجز موعد الآن' : 'Book Now';
-        // تحديث data-cal-link حسب اللغة
-        bookBtn.setAttribute('data-cal-link', lang === 'ar' ? 'dramrclinic/hagz?attendeePhoneNumber=+20' : 'dramrclinic/booking?attendeePhoneNumber=+20');
+        // اللينك ثابت ومش بنغيره هنا
       }
     }
 
